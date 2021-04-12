@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="popup">
+    <span style="font-size: 33px">Great!</span>
+    <p style="margin-top: 30px;">Your account has been created successfully</p>
+    <button type="button" id="startBut" onclick="startExp()">Start Exploring -></button>
+</div>
+<div class="trans"></div>
+<div class="content">
+    <p style="font-size: 22px;">Please sign up</p>
+    <div class="inputs">
+        <input type="text" id="firstName" placeholder="First name">
+        <button class="warn" id="firstWarn" disabled>
+            Please provide a valid First name.
+        </button>
+        <input type="text" id="lastName" placeholder="Last name">
+        <button class="warn" id="lastWarn" disabled>
+            Please provide a valid Last name.
+        </button>
+        <input type="text" id="email" placeholder="Email adress">
+        <button class="warn" id="emailWarn" disabled>
+            Please provide a valid Email.
+        </button>
+        <input type="password" id="password" placeholder="Password">
+        <button class="warn" id="passWarn" disabled>
+            Please provide a valid Password.
+        </button>
+    </div>
+    <div class="checkbox" onclick="checkInputs()">
+        <input type="checkbox" id="check">
+        <span>I agree with Privacy Policy</span>
+    </div>
+    <button id="signBut" onclick="popup()">Sign Up</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
