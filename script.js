@@ -32,6 +32,7 @@ firstName.addEventListener('input', function(event) {
         document.getElementById('firstWarn').style.visibility = "hidden";
         firstTotal = 1;
     }
+    checkInputs();
 });
 
 lastName.addEventListener('input', function(event) {
@@ -44,6 +45,7 @@ lastName.addEventListener('input', function(event) {
         document.getElementById('lastWarn').style.visibility = "hidden";
         secondTotal = 1;
     }
+    checkInputs();
 });
 
 email.addEventListener('input', function(event) {
@@ -56,6 +58,7 @@ email.addEventListener('input', function(event) {
         document.getElementById('emailWarn').style.visibility = "hidden";
         thirdTotal = 1;
     }
+    checkInputs();
 });
 password.addEventListener('input', function(event) {
     let testFirst = passRegExp.test(password.value);
@@ -67,11 +70,15 @@ password.addEventListener('input', function(event) {
         document.getElementById('passWarn').style.visibility = "hidden";
         fourthTotal = 1;
     }
+    checkInputs();
 });
 
 function checkInputs(){
-    if (firstTotal == 1 && secondTotal == 1 && thirdTotal == 1 && fourthTotal == 1){
+
+    if (firstTotal == 1 && secondTotal == 1 && thirdTotal == 1 && fourthTotal == 1 && checkbox.checked == true){
         signButton.disabled = false;
+    } else {
+        signButton.disabled = true;
     }
 }
 
